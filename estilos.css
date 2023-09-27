@@ -1,0 +1,730 @@
+/*1. General styles*/
+/*2. Header styles*/
+/*3. Introduction styles*/
+/*4. Hospital styles*/
+/*5. Team styles*/
+/*6. Map & Social*/
+/*7. Footer styles*/
+/*8. Media queries*/
+
+/*1. General styles*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+body {
+  background-color: #f5ebe3;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/*2. Header styles*/
+#fundacion {
+  text-align: center;
+  background-color: #C8CDE5;
+  padding: 10px;
+  font-weight: 400;
+  border: 1px solid black;
+  font-size: 1.1rem;
+}
+
+header {
+  background-color: #EFF8F3;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  height: 120px;
+}
+
+#sanMichi {
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  margin: auto 2px;
+}
+
+header h1 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 5;
+  align-self: end;
+}
+
+header nav {
+  grid-row: 2 / 3;
+  grid-column: 2 / 5;
+}
+
+header ul {
+  display: flex;
+  justify-items: center;
+}
+
+header ul li {
+  list-style: none;
+  margin: auto 2px;
+  font-size: 0.65rem;
+}
+
+
+/*3. Introduction styles*/
+#introduction {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 25px 0px 30px;
+}
+
+/*4. Hospital styles*/
+#hospital {
+  margin: auto 0;
+  text-align: center;
+}
+
+#hospital img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#rigthGridHospital p {
+  margin-top: 20px;
+}
+
+#hospital figure figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  margin: 0px auto 10px;
+}
+
+/*5. Team styles*/
+#teamSection {
+  text-align: center;
+}
+
+#teamSection h2 {
+  margin: 15px auto 5px;
+}
+
+#teamDiv {
+  background-color: #EFF8F3;
+  border-radius: 20px;
+  margin: 5px 4px 10px;
+  padding: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+}
+
+#carlos {
+  grid-row: 3 / 4;
+  grid-column: 1 / 3;
+  z-index: 5;
+  /*esta línea es la que pone la img entre las columnas*/
+  text-align: center;
+}
+
+.teamIMG {
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+
+/*6.Map & Social styles*/
+#mapa {
+  margin: 30px auto 0;
+  text-align: center;
+}
+
+#social {
+  background-color: #EFF8F3;
+  border-radius: 20px;
+  margin: 5px 4px 10px;
+  text-align: center;
+  padding: 5px;
+  border: 1px black solid;
+}
+
+#redes {
+  display: flex;
+  justify-content: space-around;
+}
+
+#redes img {
+  width: 35px;
+  height: auto;
+}
+
+/*Footer styles*/
+footer {
+  border-top: 1px black solid;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto 0;
+  background-color: #EFF8F3;
+  width: 100%;
+  height: auto;
+  font-size: 0.5rem;
+}
+
+/*8. Media queries*/
+
+/*media queries for medium smartphones*/
+@media only screen and (min-width: 325px) and (max-width: 375px) {
+  #sanMichi {
+    margin: auto 2px auto 20px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header ul li {
+    font-size: 0.8rem;
+  }
+
+  #hospital img {
+    width: 90%;
+  }
+
+  footer {
+    display: grid;
+    max-width: 400px;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.6rem;
+  }
+
+  #proyectoFicticio {
+    grid-column: 1 / 2;
+  }
+
+  #email {
+    grid-column: 2 / 3;
+    justify-self: end;
+  }
+
+}
+
+/*media queries for large smartphones*/
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+  #sanMichi {
+    margin: auto 2px auto 30px;
+    width: 120px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header ul li {
+    font-size: 0.9rem;
+  }
+
+  #introduction {
+    margin: 20px 0px 45px;
+  }
+
+  #teamDiv {
+    gap: 25px;
+    padding: 25px;
+  }
+
+  #teamSection h2 {
+    margin: 35px auto 5px;
+  }
+
+  .teamIMG {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+  }
+
+  #mapa iframe {
+    width: 300px;
+    height: 400px;
+  }
+
+  #social {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px black solid;
+  }
+
+  #redes img {
+    margin: 0 10px;
+  }
+
+}
+
+/*media queries for tablets*/
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  #fundacion {
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  #sanMichi {
+    margin: auto 2px auto 30px;
+    width: 105px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  header ul li {
+    font-size: 1rem;
+    margin: auto 8px;
+  }
+
+  #hospital {
+    max-width: 100%;
+    margin-top: 100px;
+  }
+
+  #hospital img {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #teamDiv {
+    padding: 20px;
+  }
+
+
+  #teamSection h2 {
+    margin: 35px auto 5px;
+  }
+
+  .teamIMG {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+  }
+
+  #mapa iframe {
+    min-width: 400px;
+    height: 400px;
+  }
+
+  #social {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px black solid;
+  }
+
+  #redes img {
+    margin: 0 20px;
+  }
+
+  footer {
+    display: grid;
+    max-width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.8rem;
+  }
+
+  #proyectoFicticio {
+    grid-column: 1 / 2;
+  }
+
+  #email {
+    grid-column: 2 / 3;
+    justify-self: end;
+  }
+
+}
+
+/*media queries for small laptops or big tablets*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #fundacion {
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  #sanMichi {
+    margin: auto 2px auto 30px;
+    width: 150px;
+    height: auto;
+  }
+
+  header h1 {
+    font-size: 3rem;
+  }
+
+  header ul li {
+    font-size: 1.5rem;
+    margin: auto 10px;
+  }
+
+  nav ul li a:hover {
+    color: #C8CDE5;
+    font-size: 1.5rem;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  #introduction {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 25px 0px 30px;
+  }
+
+  /*4. Hospital styles*/
+  #hospital {
+    display: grid;
+    grid-template: 20%, 1fr, 1fr, 1fr / repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  #hospital h2 {
+    font-size: 2rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+
+  #hospital p {
+    font-size: 1.5rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  #hospital img {
+    width: 100%;
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+    justify-self: end;
+  }
+
+  #rigthGridHospital {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  #rigthGridHospital p {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 100;
+  }
+
+  #hospital figure figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0px auto 10px;
+  }
+
+  /*5. Team styles*/
+  #teamSection {
+    text-align: center;
+  }
+
+  #teamSection h2 {
+    margin: 150px auto 5px;
+  }
+
+  #teamDiv {
+    background-color: #EFF8F3;
+    border-radius: 20px;
+    margin: 5px 0px 10px;
+    padding: 20px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .teamIMG {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+  }
+
+  #carlos {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+    z-index: 5;
+    /*esta línea es la que pone la img entre las columnas*/
+    text-align: center;
+  }
+
+
+  /*6.Map & Social styles*/
+  #mapa {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+  #mapa p {
+    font-size: 1.5rem;
+  }
+
+  #mapa iframe {
+    width: 700px;
+    height: 400px;
+  }
+
+  #social {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px black solid;
+  }
+
+  #redes img {
+    margin: 0 20px;
+  }
+
+  footer {
+    display: grid;
+    max-width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 0.8rem;
+  }
+
+  #proyectoFicticio {
+    grid-column: 1 / 2;
+  }
+
+  #email {
+    grid-column: 2 / 3;
+    justify-self: end;
+  }
+
+  /*Footer styles*/
+  footer {
+    border-top: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    background-color: #EFF8F3;
+    max-width: 1024px;
+    height: auto;
+    font-size: 1rem;
+  }
+
+}
+
+/*media queries for regular size laptop*/
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
+  #fundacion {
+    padding: 10px;
+    font-weight: 400;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  #sanMichi {
+    margin: auto 2px auto 30px;
+    width: 150px;
+    height: auto;
+  }
+
+  header h1 {
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+    font-size: 3rem;
+    align-self: center;
+  }
+
+  header nav {
+    grid-row: 1 / 3;
+    grid-column: 4 / 5;
+  }
+
+  header ul li {
+    font-size: 1.5rem;
+    margin: auto 10px;
+  }
+
+  nav ul li a:hover {
+    color: #C8CDE5;
+    font-size: 1.5rem;
+    background-color: black;
+    border-radius: 5px;
+  }
+
+  #introduction {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 25px 0px 30px;
+  }
+
+  /*4. Hospital styles*/
+  #hospital {
+    display: grid;
+    grid-template: 20%, 1fr, 1fr / 1fr, 1fr;
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  #hospital h2 {
+    font-size: 2rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+  }
+
+  #hospital p {
+    font-size: 1.5rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+
+  #hospital img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    justify-self: end;
+    padding: 0;
+  }
+
+  #rigthGridHospital {
+    display: grid;
+    grid-template: 1fr, 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 60px;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  #rigthGridHospital img {
+    max-width: 500px;
+    height: auto;
+  }
+
+  #rigthGridHospital p {
+    display: none;
+  }
+
+  #hospital figure figcaption {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0px auto 10px;
+  }
+
+  /*5. Team styles*/
+  #teamSection {
+    text-align: center;
+  }
+
+  #teamSection h2 {
+    margin: 100px auto 5px;
+  }
+
+  #teamDiv {
+    background-color: #EFF8F3;
+    border-radius: 20px;
+    margin: 5px 0px 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+  }
+
+  .teamIMG {
+    border-radius: 50%;
+    width: 170px;
+    height: auto;
+  }
+
+
+  /*6.Map & Social styles*/
+  #mapa {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+  #mapa p {
+    font-size: 1.5rem;
+  }
+
+  #mapa iframe {
+    width: 700px;
+    height: 400px;
+  }
+
+  #social {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px black solid;
+  }
+
+  #redes img {
+    margin: 0 20px;
+  }
+
+  /*Footer styles*/
+  footer {
+    border-top: 1px black solid;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto 0;
+    background-color: #EFF8F3;
+    max-width: 100%;
+    height: auto;
+    font-size: 1rem;
+  }
+
+}
