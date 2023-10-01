@@ -6,19 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="estilos.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+
   <meta name="keywords" content="Veterinaria, hospital, Michi">
   <meta name="description" content="San Michi Hospital Veterinario">
   <meta name="author" content="diosDeNada_Arie">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&display=swap" rel="stylesheet">
   <title>Veterinaria San Michi</title>
 </head>
 
 
 <body>
   <!--header section-->
-      <div id="fundacion">Veterania San Michi fundada en 2011</div>
+  <div id="fundacion">Veterania San Michi fundada en 2011</div>
   <header>
     <img id="sanMichi" src="San Michi.png" alt="Una imagen circular un tierno gato rojo.">
     <h1>Veterinaria San Michi</h1>
@@ -27,6 +29,7 @@
         <li><a href="#" target="#"> >Medicamentos</a></li>
         <li><a href="#" target="#"> >Mercadería</a></li>
         <li><a href="#" target="#"> >Contacto</a></li>
+        <li><a href="#cita"> >Agendá una cita</a></li>
       </ul>
     </nav>
   </header>
@@ -44,9 +47,10 @@
       <p>Nuestras instalaciones médicas se encuentran en el corazón mismo de Michiland, donde desde hace 10 años
         ayudamos a mejorar la vida de muchos animales de manera profesional, aplicando las mejores técnicas actuales y
         siempre en busca de mejora.</p>
-        <figure>
-      <img src="resources\imgs\premium_photo-1678963247800-f1299e0dce04.avif" alt="Pared sur de un edificio, con plantas cerca de sus varias ventanas.">
-      <figcaption>En el 2015 agregamos plantas comestibles en la azotea del Hospital.</figcaption>
+      <figure>
+        <img src="resources\imgs\premium_photo-1678963247800-f1299e0dce04.avif"
+          alt="Pared sur de un edificio, con plantas cerca de sus varias ventanas.">
+        <figcaption>En el 2015 agregamos plantas comestibles en la azotea del Hospital.</figcaption>
       </figure>
 
       <div id="rigthGridHospital">
@@ -89,31 +93,53 @@
         </figure>
 
         <figure id="carlos">
-          <img class="teamIMG"  src="resources\imgs\doc5.jpg">
+          <img class="teamIMG" src="resources\imgs\doc5.jpg">
           <figcaption>Doctor Carlos K.</figcaption>
         </figure>
       </div>
     </section>
+
+    <!--Cita section-->
+    <section id="cita">
+      <h2>Agendá una cita</h2>
+      <form>
+        <label for="fechaCita">
+          <p>Elegí tu cita en el siguiente formato: día/mes/año.<br>Después elegí la hora en formato 24 horas.</p><span class="validity"></span>
+          <input type="datetime-local" name="fechaCita" min="2023-01-01" max="2040-01-31" required
+            pattern="\d{4}-\d{2}-\d{2}" id="fechaCita"/><br>
+            </label>
+            <label for="nombreAnimal">Nombre de animal paciente:</label><br>
+            <input type="text" name="nombreAnimal" id="nombreAnimal"><br>
+            <label for="correo">Correo para contacto:</label><br>
+            <input type="email" name="coreo" id="correo"><br><br>
+        <p>
+          <button id="citaBtn">Agendar</button>
+        </p>
+      </form>
+    </section>
   </main>
 
-   <!--Map & Social section--> 
-<div id="mapa">
-<p>Ven a conocer nuestro Hospital Veterinario</p>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5937163432186!2d-109.6251738258871!3d23.075352114358765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af59b7f350330d%3A0x7aab309408c090b4!2sMichiland!5e0!3m2!1ses!2scr!4v1691869838982!5m2!1ses!2scr" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
-<section id="social">
-  <p>Síguenos en redes sociales</p>
-  <div id="redes">
-  <img src="resources\imgs\fb.png">
-  <img src="resources\imgs\ig.png">
+  <!--Map & Social section-->
+  <div id="mapa">
+    <p>Ven a conocer nuestro Hospital Veterinario</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.5937163432186!2d-109.6251738258871!3d23.075352114358765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af59b7f350330d%3A0x7aab309408c090b4!2sMichiland!5e0!3m2!1ses!2scr!4v1691869838982!5m2!1ses!2scr"
+      width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-</section>
 
-<!--footer section-->
+  <section id="social">
+    <p>Síguenos en redes sociales</p>
+    <div id="redes">
+      <img src="resources\imgs\fb.png">
+      <img src="resources\imgs\ig.png">
+    </div>
+  </section>
+
+  <!--footer section-->
   <footer>
-  <p id="proyectoFicticio">proyecto ficticio creado por diosDeNada</p>
-  <p id="email">contacto ariegonzaguer@gmail.com</p>
+    <p id="proyectoFicticio">proyecto ficticio creado por diosDeNada / ariegonzaguer@gmail.com</p>
   </footer>
 </body>
+
 </html>
