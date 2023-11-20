@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" translate="yes">
 
 <head>
   <meta charset="UTF-8">
@@ -11,28 +11,31 @@
   <meta name="keywords" content="Veterinaria, hospital, Michi">
   <meta name="description" content="San Michi Hospital Veterinario">
   <meta name="author" content="diosDeNada_Arie">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300&display=swap"
+    rel="stylesheet">
   <title>Veterinaria San Michi</title>
 </head>
 
 
 <body>
   <!--header section-->
-  <div id="fundacion">Veterania San Michi fundada en 2011</div>
   <header>
-    <img id="sanMichi" src="San Michi.png" alt="Una imagen circular un tierno gato rojo.">
     <h1>Veterinaria San Michi</h1>
-    <nav>
-      <ul>
-        <li><a href="#" target="#"> >Medicamentos</a></li>
-        <li><a href="#" target="#"> >Mercadería</a></li>
-        <li><a href="#" target="#"> >Contacto</a></li>
-        <li><a href="#cita"> >Agendá una cita</a></li>
-      </ul>
-    </nav>
+    <img id="sanMichi" src="San Michi.png" alt="Una imagen circular un tierno gato rojo.">
+    <p>Cuidando a tu familia desde 2011</p>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" target="#"> Medicamentos</a></li>
+      <li><a href="#" target="#"> Contacto</a></li>
+      <li><a href="#" target="#"> Mercadería</a></li>
+      <li><a href="#cita"> Agendá una cita</a></li>
+    </ul>
+  </nav>
+
   <main>
 
     <!--introduction section-->
@@ -44,28 +47,23 @@
     <!--hospital section-->
     <section id="hospital">
       <h2>Nuestro hospital</h2>
+      <figure>
+        <img src="resources/imgs/edificio.jpg"
+          alt="Pared sur del edificio veterinario, con plantas cerca de sus varias ventanas.">
+        <figcaption>En el 2015 agregamos plantas comestibles en la azotea del Hospital.</figcaption>
+      </figure>
       <p>Nuestras instalaciones médicas se encuentran en el corazón mismo de Michiland, donde desde hace 10 años
         ayudamos a mejorar la vida de muchos animales de manera profesional, aplicando las mejores técnicas actuales y
         siempre en busca de mejora.</p>
-      <figure>
-        <img src="resources\imgs\premium_photo-1678963247800-f1299e0dce04.avif"
-          alt="Pared sur de un edificio, con plantas cerca de sus varias ventanas.">
-        <figcaption>En el 2015 agregamos plantas comestibles en la azotea del Hospital.</figcaption>
+      <p>Durante esta década hemos atendido una gran variedad de animales de todo el mundo.</p>
+    </section>
+
+    <div>
+      <figure id="first">
+        <img src="resources\imgs\tigre.jpg" alt="un tigre boca arriba en una cama de hospital.">
+        <figcaption>Panthera tigris tigris (Tigre de Bengala) hembra siendo anestesiada por nuestras profesionales.</figcaption>
       </figure>
 
-      <div id="rigthGridHospital">
-        <p>Durante esta década hemos atendido una gran variedad de animales de todo el mundo.</p>
-        <figure id="first">
-          <img src="resources\imgs\tigre.jpg" alt="un tigre boca arriba en una cama de hospital.">
-          <figcaption>Tigrizzi siendo anestesiada por nuestras profesionales.</figcaption>
-        </figure>
-
-        <figure id="second">
-          <img src="resources\imgs\marmota.jpg" alt="marmota feliz siendo alzada por una persona.">
-          <figcaption>Misy tranquila después de una operación en una de sus patas traseras.</figcaption>
-        </figure>
-      </div>
-    </section>
 
     <!--team section-->
     <section id="teamSection">
@@ -104,14 +102,15 @@
       <h2>Agendá una cita</h2>
       <form>
         <label for="fechaCita">
-          <p>Elegí tu cita en el siguiente formato: día/mes/año.<br>Después elegí la hora en formato 24 horas.</p><span class="validity"></span>
+          <p>Elegí tu cita en el siguiente formato: día/mes/año.<br>Después elegí la hora en formato 24 horas.</p><span
+            class="validity"></span>
           <input type="datetime-local" name="fechaCita" min="2023-01-01" max="2040-01-31" required
-            pattern="\d{4}-\d{2}-\d{2}" id="fechaCita"/><br>
-            </label>
-            <label for="nombreAnimal">Nombre de animal paciente:</label><br>
-            <input type="text" name="nombreAnimal" id="nombreAnimal"><br>
-            <label for="correo">Correo para contacto:</label><br>
-            <input type="email" name="coreo" id="correo"><br><br>
+            pattern="\d{4}-\d{2}-\d{2}" id="fechaCita" /><br>
+        </label>
+        <label for="nombreAnimal">Nombre de animal paciente:</label><br>
+        <input type="text" name="nombreAnimal" id="nombreAnimal"><br>
+        <label for="correo">Correo para contacto:</label><br>
+        <input type="email" name="coreo" id="correo"><br><br>
         <p>
           <button id="citaBtn">Agendar</button>
         </p>
